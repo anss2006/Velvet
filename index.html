@@ -2141,9 +2141,19 @@ const VCAdmin = (function(){
 
     // Gallery images
     if(data.gallery && Array.isArray(data.gallery)){
+      // First hide all gallery cells
+      document.querySelectorAll('[data-gallery-idx]').forEach(cell => {
+        cell.style.display = 'none';
+      });
+      // Then show and update only the ones that have data
       data.gallery.forEach((item, i) => {
         const img = document.querySelector('[data-gallery-img="' + i + '"]');
-        if(img && item && item.url) img.src = item.url;
+        const cell = document.querySelector('[data-gallery-idx="' + i + '"]');
+        if(img && item && item.url){
+          img.src = item.url;
+          if(item.alt) img.alt = item.alt;
+        }
+        if(cell) cell.style.display = '';
       });
     }
 
@@ -2166,6 +2176,12 @@ const VCAdmin = (function(){
     if(data.instagram){
       document.querySelectorAll('a[href*="instagram.com"]').forEach(el => {
         el.href = 'https://instagram.com/' + data.instagram;
+        // Update visible text if it looks like a handle (@something or instagram.com/something)
+        if(el.textContent.trim().startsWith('@')){
+          el.textContent = '@' + data.instagram;
+        } else if(el.textContent.trim().includes('instagram.com/')){
+          el.textContent = 'instagram.com/' + data.instagram;
+        }
       });
     }
   }
@@ -2510,4 +2526,4 @@ const VCAdmin = (function(){
 })();
 </script>
 </body>
-</html>
+    </html>
