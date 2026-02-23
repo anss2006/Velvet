@@ -3,80 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Birthday & Wedding Cakes in Trivandrum | Velvet Crumbs Bakery</title>
-    <meta name="description" content="Order custom birthday, wedding, and anniversary cakes in Trivandrum, Pattom. Freshly baked, eggless options available. WhatsApp to order custom theme cakes in Kerala.">
+    <title id="page-title">Loading...</title>
+    <meta name="description" id="meta-description" content="">
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Custom Birthday & Wedding Cakes in Trivandrum | Velvet Crumbs Bakery">
-    <meta property="og:description" content="Order custom birthday, wedding, and theme cakes in Trivandrum. Freshly baked and beautifully designed.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:url" content="https://velvetcrumbs.in">
-    <meta property="og:site_name" content="Velvet Crumbs Bakery">
+    <meta property="og:title" id="og-title" content="">
+    <meta property="og:description" id="og-description" content="">
+    <meta property="og:image" id="og-image" content="">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:site_name" id="og-sitename" content="">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Custom Birthday & Wedding Cakes in Trivandrum | Velvet Crumbs Bakery">
-    <meta name="twitter:description" content="Order custom birthday, wedding, and theme cakes in Trivandrum. Freshly baked and beautifully designed.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta name="twitter:title" id="twitter-title" content="">
+    <meta name="twitter:description" id="twitter-description" content="">
+    <meta name="twitter:image" id="twitter-image" content="">
     
     <!-- Canonical & Theme -->
-    <link rel="canonical" href="https://velvetcrumbs.in">
-    <meta name="theme-color" content="#E75480">
-    <meta name="keywords" content="custom cakes Trivandrum, birthday cake Trivandrum, wedding cake Kerala, custom theme cake Pattom, eggless cake Trivandrum, cake delivery Trivandrum, anniversary cake Kerala">
+    <link rel="canonical" id="canonical-url" href="">
+    <meta name="theme-color" id="theme-color" content="">
+    <meta name="keywords" id="meta-keywords" content="">
 
     <!-- Structured Data: Local Business -->
     <script type="application/ld+json" id="schema-jsonld">
-    {
-      "@context": "https://schema.org",
-      "@type": "Bakery",
-      "name": "Velvet Crumbs Bakery",
-      "description": "Custom birthday, wedding, and theme cakes in Trivandrum, Kerala. Freshly baked with eggless options.",
-      "url": "https://velvetcrumbs.in",
-      "telephone": "+91-70345-25123",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Pattom",
-        "addressLocality": "Trivandrum",
-        "addressRegion": "Kerala",
-        "postalCode": "695004",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 8.5241,
-        "longitude": 76.9170
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-          "opens": "09:00",
-          "closes": "20:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "10:00",
-          "closes": "18:00"
-        }
-      ],
-      "sameAs": ["https://instagram.com/velvetcrumbs"],
-      "servesCuisine": "Bakery",
-      "priceRange": "₹₹",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "120"
-      }
-    }
     </script>
 
-    <!-- Site Config -->
+    <!-- ╔═══════════════════════════════════════════════════╗ -->
+    <!-- ║         CLIENT CONFIG — EDIT THIS ONLY           ║ -->
+    <!-- ╚═══════════════════════════════════════════════════╝ -->
     <script>
-        const SITE = {
-            phone: "917034525123",
-            whatsapp: function(msg){ return "https://wa.me/" + this.phone + "?text=" + encodeURIComponent(msg || "Hi I want to order a cake"); },
-            instagram: "https://instagram.com/velvetcrumbs"
-        };
+    const CLIENT = {
+      // ── Business Details ──────────────────────────────
+      name:         "Velvet Crumbs Bakery",
+      tagline:      "Custom Cakes in Trivandrum",
+      description:  "Freshly baked, beautifully designed, and delivered with love.",
+      about:        "At Velvet Crumbs, every cake is handcrafted using premium ingredients and creative designs tailored to your celebration. Based in Pattom, Trivandrum, we specialise in custom birthday cakes, wedding cakes, and anniversary cakes across Kerala — with eggless options always available. Every cake tastes as good as it looks.",
+
+      // ── Contact ───────────────────────────────────────
+      phone:        "917034525123",   // include country code, no +
+      instagram:    "velvetcrumbs",   // handle only, no @
+
+      // ── Location ──────────────────────────────────────
+      address:      "Pattom, Trivandrum, Kerala 695004",
+      street:       "Pattom",
+      city:         "Trivandrum",
+      region:       "Kerala",
+      pincode:      "695004",
+      lat:          8.5241,
+      lng:          76.9170,
+
+      // ── Website ───────────────────────────────────────
+      siteUrl:      "https://velvetcrumbs.in",
+      ogImage:      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      keywords:     "custom cakes Trivandrum, birthday cake Trivandrum, wedding cake Kerala, custom theme cake Pattom, eggless cake Trivandrum, cake delivery Trivandrum, anniversary cake Kerala",
+
+      // ── Branding ──────────────────────────────────────
+      colorAccent:  "#E75480",   // primary brand colour (buttons, highlights)
+      colorLight:   "#F8C8DC",   // lighter brand colour (borders, backgrounds)
+
+      // ── Admin ─────────────────────────────────────────
+      adminPassword: "velvet2025",
+
+      // ── Firebase ──────────────────────────────────────
+      firebase: {
+        apiKey:            "AIzaSyD6tAEGRUNGqCcOvhXLtL-mWK6ZSs67SzQ",
+        authDomain:        "velvet-crumbs-tvm.firebaseapp.com",
+        databaseURL:       "https://velvet-crumbs-tvm-default-rtdb.firebaseio.com",
+        projectId:         "velvet-crumbs-tvm",
+        storageBucket:     "velvet-crumbs-tvm.firebasestorage.app",
+        messagingSenderId: "721673796562",
+        appId:             "1:721673796562:web:fa524900e74ac6351ba60b"
+      },
+
+      // ── Helpers (do not edit) ─────────────────────────
+      whatsapp: function(msg){ return "https://wa.me/" + this.phone + "?text=" + encodeURIComponent(msg || "Hi I want to order"); }
+    };
+
+    // SITE kept for backward compatibility with existing functions
+    const SITE = CLIENT;
+
+    // ── Apply CLIENT config to meta tags & page ────────
+    (function(){
+      const c = CLIENT;
+      const fullTitle = c.tagline + " | " + c.name;
+
+      document.getElementById("page-title").textContent         = fullTitle;
+      document.getElementById("meta-description").content       = "Order custom cakes in " + c.city + ". " + c.description;
+      document.getElementById("og-title").content               = fullTitle;
+      document.getElementById("og-description").content         = "Order custom cakes in " + c.city + ". " + c.description;
+      document.getElementById("og-image").content               = c.ogImage;
+      document.getElementById("og-url").content                 = c.siteUrl;
+      document.getElementById("og-sitename").content            = c.name;
+      document.getElementById("twitter-title").content          = fullTitle;
+      document.getElementById("twitter-description").content    = "Order custom cakes in " + c.city + ". " + c.description;
+      document.getElementById("twitter-image").content          = c.ogImage;
+      document.getElementById("canonical-url").href             = c.siteUrl;
+      document.getElementById("theme-color").content            = c.colorAccent;
+      document.getElementById("meta-keywords").content          = c.keywords;
+
+      // Schema.org JSON-LD
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "Bakery",
+        "name": c.name,
+        "description": c.about,
+        "url": c.siteUrl,
+        "telephone": "+" + c.phone,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": c.street,
+          "addressLocality": c.city,
+          "addressRegion": c.region,
+          "postalCode": c.pincode,
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": c.lat,
+          "longitude": c.lng
+        },
+        "openingHours": ["Mo-Sa 09:00-20:00", "Su 10:00-18:00"],
+        "sameAs": ["https://instagram.com/" + c.instagram],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "120"
+        }
+      };
+      document.getElementById("schema-jsonld").textContent = JSON.stringify(schema, null, 2);
+
+      // Inject brand colours as CSS variables
+      const style = document.createElement("style");
+      style.textContent = `:root { --color-accent: ${c.colorAccent}; --color-light: ${c.colorLight}; }`;
+      document.head.appendChild(style);
+
+      // Populate data-client elements once DOM is ready
+      document.addEventListener("DOMContentLoaded", function(){
+        document.querySelectorAll("[data-client]").forEach(el => {
+          const key = el.getAttribute("data-client");
+          if(key === "instagram-link"){
+            el.href = "https://instagram.com/" + c.instagram;
+            el.textContent = "@" + c.instagram;
+          } else if(key === "name"){
+            el.textContent = c.name;
+          } else if(key === "city"){
+            el.textContent = c.city;
+          } else if(key === "address"){
+            el.textContent = c.address;
+          } else if(key === "about"){
+            el.textContent = c.about;
+          }
+        });
+        // Wire tel link
+        document.querySelectorAll("[data-tel-link]").forEach(el => {
+          const raw = c.phone.replace(/\D/g,"");
+          el.href = "tel:+" + raw;
+          el.textContent = "+" + raw.slice(0,2) + " " + raw.slice(2,7) + " " + raw.slice(7);
+        });
+        // Wire admin input placeholders
+        document.querySelectorAll("[data-client-placeholder]").forEach(el => {
+          const key = el.getAttribute("data-client-placeholder");
+          if(c[key]) el.placeholder = c[key];
+        });
+        // Wire SITE.instagram for applyData compatibility
+        SITE.instagram = "https://instagram.com/" + c.instagram;
+      });
+    })();
     </script>
 
     <!-- Google Fonts -->
@@ -283,8 +374,8 @@ img, svg { display: block; max-width: 100%; }
 .leading-relaxed { line-height: 1.625; }
 .leading-tight { line-height: 1.25; }
 .text-white { color: #ffffff; }
-.text-brand-accent { color: #E75480; }
-.text-brand-primary { color: #F8C8DC; }
+.text-brand-accent { color: var(--color-accent); }
+.text-brand-primary { color: var(--color-light); }
 .text-brand-muted { color: #6E5C67; }
 .text-brand-text { color: #3A2E39; }
 .text-gray-300 { color: #d1d5db; }
@@ -293,9 +384,9 @@ img, svg { display: block; max-width: 100%; }
 .text-red-400 { color: #f87171; }
 
 .bg-white { background-color: #ffffff; }
-.bg-brand-accent { background-color: #E75480; }
+.bg-brand-accent { background-color: var(--color-accent); }
 .bg-brand-bg { background-color: #FFF9FB; }
-.bg-brand-primary { background-color: #F8C8DC; }
+.bg-brand-primary { background-color: var(--color-light); }
 .bg-brand-secondary { background-color: #FFF0F5; }
 .bg-brand-text { background-color: #3A2E39; }
 .bg-green-400 { background-color: #4ade80; }
@@ -316,7 +407,7 @@ img, svg { display: block; max-width: 100%; }
 
 .border { border-width: 1px; border-style: solid; border-color: #e5e7eb; }
 .border-t { border-top-width: 1px; border-style: solid; border-color: #e5e7eb; }
-.border-brand-primary { border-color: #F8C8DC; }
+.border-brand-primary { border-color: var(--color-light); }
 .border-brand-primary\/30 { border-color: rgba(248,200,220,0.3); }
 .border-white\/10 { border-color: rgba(255,255,255,0.1); }
 .border-white\/50 { border-color: rgba(255,255,255,0.5); }
@@ -395,8 +486,8 @@ img, svg { display: block; max-width: 100%; }
 .hover\:shadow-2xl:hover { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
 .hover\:shadow-hover:hover { box-shadow: 0 20px 45px rgba(0,0,0,0.18); }
 .hover\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); }
-.hover\:text-brand-accent:hover { color: #E75480; }
-.hover\:text-brand-primary:hover { color: #F8C8DC; }
+.hover:text-brand-accent:hover { color: var(--color-accent); }
+.hover:text-brand-primary:hover { color: var(--color-light); }
 .hover\:text-gray-300:hover { color: #d1d5db; }
 .hover\:text-red-600:hover { color: #dc2626; }
 .hover\:-translate-y-1:hover { --tw-translate-y: -0.25rem; transform: var(--tw-transform); }
@@ -418,7 +509,7 @@ img, svg { display: block; max-width: 100%; }
 .focus\:top-4:focus { top: 1rem; }
 .focus\:left-4:focus { left: 1rem; }
 .focus\:z-\[200\]:focus { z-index: 200; }
-.focus\:bg-brand-accent:focus { background-color: #E75480; }
+.focus:bg-brand-accent:focus { background-color: var(--color-accent); }
 .focus\:text-white:focus { color: #ffffff; }
 .focus\:px-4:focus { padding-left: 1rem; padding-right: 1rem; }
 .focus\:py-2:focus { padding-top: 0.5rem; padding-bottom: 0.5rem; }
@@ -613,7 +704,7 @@ img, svg { display: block; max-width: 100%; }
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <span class="script-font text-3xl text-brand-accent">Velvet Crumbs</span>
+                    <span class="script-font text-3xl text-brand-accent" data-client="name">Velvet Crumbs</span>
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -666,9 +757,9 @@ img, svg { display: block; max-width: 100%; }
 
         <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
             <div class="reveal active">
-                <span class="script-font text-5xl md:text-7xl text-brand-accent mb-2 block">Velvet Crumbs</span>
+                <span class="script-font text-5xl md:text-7xl text-brand-accent mb-2 block" data-client="name">Velvet Crumbs</span>
                 <h1 class="hero-title text-4xl md:text-6xl lg:text-7xl font-bold text-brand-text mb-6 leading-tight">
-                    Custom Cakes in <br class="md:hidden"/> Trivandrum
+                    Custom Cakes in <br class="md:hidden"/> <span data-client="city">Trivandrum</span>
                 </h1>
                 <p class="text-lg md:text-xl text-brand-muted mb-10 max-w-2xl mx-auto font-light">
                     Freshly baked, beautifully designed, and delivered with love. <br/> 
@@ -736,7 +827,7 @@ img, svg { display: block; max-width: 100%; }
                         Baking Happiness, <br/> One Cake at a Time.
                     </h2>
                     <p class="text-brand-muted text-lg mb-8 leading-relaxed">
-                        At Velvet Crumbs, every cake is handcrafted using premium ingredients and creative designs tailored to your celebration. Based in Pattom, Trivandrum, we specialise in custom birthday cakes, wedding cakes, and anniversary cakes across Kerala — with eggless options always available. Every cake tastes as good as it looks.
+                        <span data-client="about">At Velvet Crumbs, every cake is handcrafted using premium ingredients and creative designs tailored to your celebration. Based in Pattom, Trivandrum, we specialise in custom birthday cakes, wedding cakes, and anniversary cakes across Kerala — with eggless options always available. Every cake tastes as good as it looks.</span>
                     </p>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -795,7 +886,7 @@ img, svg { display: block; max-width: 100%; }
                 <div class="w-24 h-1 bg-brand-accent mx-auto mb-4"></div>
                 <p class="text-brand-muted text-sm mt-3">
                     <i class="fab fa-instagram mr-1 text-brand-accent"></i>
-                    Follow <a href="https://instagram.com/velvetcrumbs" target="_blank" class="text-brand-accent font-medium hover:underline">@velvetcrumbs</a> on Instagram to see our latest real cakes!
+                    Follow <a href="https://instagram.com/velvetcrumbs" target="_blank" class="text-brand-accent font-medium hover:underline" data-client="instagram-link">@velvetcrumbs</a> on Instagram to see our latest real cakes!
                 </p>
             </div>
 
@@ -825,7 +916,7 @@ img, svg { display: block; max-width: 100%; }
                             "The cake was exactly how we imagined. Beautiful design and amazing taste!"
                         </p>
 
-                        <div style="color:#E75480;font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
+                        <div style="color:var(--color-accent);font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
                         <div class="flex items-center justify-center gap-4">
                             <div class="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-brand-accent font-bold">
                                 AR
@@ -846,7 +937,7 @@ img, svg { display: block; max-width: 100%; }
                             "Delivered on time and tasted incredible. Highly recommend Velvet Crumbs."
                         </p>
 
-                        <div style="color:#E75480;font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
+                        <div style="color:var(--color-accent);font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
                         <div class="flex items-center justify-center gap-4">
                             <div class="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-brand-accent font-bold">
                                 RS
@@ -867,7 +958,7 @@ img, svg { display: block; max-width: 100%; }
                             "Got my daughter's unicorn cake made here. She absolutely loved it — the detail was unreal!"
                         </p>
 
-                        <div style="color:#E75480;font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
+                        <div style="color:var(--color-accent);font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
                         <div class="flex items-center justify-center gap-4">
                             <div class="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-brand-accent font-bold">PM</div>
                             <div class="text-left">
@@ -886,7 +977,7 @@ img, svg { display: block; max-width: 100%; }
                             "Ordered our wedding cake with just 5 days notice and it was stunning. Super responsive on WhatsApp too."
                         </p>
 
-                        <div style="color:#E75480;font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
+                        <div style="color:var(--color-accent);font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
                         <div class="flex items-center justify-center gap-4">
                             <div class="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-brand-accent font-bold">AK</div>
                             <div class="text-left">
@@ -905,7 +996,7 @@ img, svg { display: block; max-width: 100%; }
                             "The red velvet was the moistest cake I have ever tasted. Everyone at the party asked where it was from!"
                         </p>
 
-                        <div style="color:#E75480;font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
+                        <div style="color:var(--color-accent);font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
                         <div class="flex items-center justify-center gap-4">
                             <div class="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-brand-accent font-bold">SM</div>
                             <div class="text-left">
@@ -1006,7 +1097,7 @@ img, svg { display: block; max-width: 100%; }
                 <div class="reveal">
                     <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Place Your Order Today</h2>
                     <p class="text-brand-primary mb-8 text-lg font-light">
-                        Let's create something sweet together. Based in Pattom, Trivandrum.
+                        Let's create something sweet together. Based in <span data-client="address">Pattom, Trivandrum</span>.
                     </p>
                     
                     <div class="space-y-6">
@@ -1016,7 +1107,7 @@ img, svg { display: block; max-width: 100%; }
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg">Location</h4>
-                                <p class="text-gray-300">Pattom, Trivandrum, Kerala 695004</p>
+                                <p class="text-gray-300" data-client="address">Pattom, Trivandrum, Kerala 695004</p>
                             </div>
                         </div>
                         
@@ -1047,7 +1138,7 @@ img, svg { display: block; max-width: 100%; }
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg">Follow Us</h4>
-                                <a href="https://instagram.com/velvetcrumbs" target="_blank" class="text-gray-300 hover:text-brand-primary transition-colors">@velvetcrumbs</a>
+                                <a href="https://instagram.com/velvetcrumbs" target="_blank" class="text-gray-300 hover:text-brand-primary transition-colors" data-client="instagram-link">@velvetcrumbs</a>
                             </div>
                         </div>
                     </div>
@@ -1079,8 +1170,8 @@ img, svg { display: block; max-width: 100%; }
                     <p class="leading-relaxed">Orders cancelled <strong class="text-white">48+ hours before delivery</strong> receive a full refund. Cancellations within 48 hours are eligible for a 50% refund. No refunds for same-day cancellations. Custom cakes with work already in progress may not be fully refundable — please WhatsApp us to discuss.</p>
                 </div>
                 <div class="text-center text-gray-400 text-sm">
-                    <p class="mb-2">📸 <span class="text-gray-300">Follow <a href="https://instagram.com/velvetcrumbs" target="_blank" class="text-brand-primary hover:text-white transition-colors">@velvetcrumbs</a> on Instagram to see our real cake photos!</span></p>
-                    <p>&copy; 2025 Velvet Crumbs Bakery, Pattom, Trivandrum. All rights reserved. &nbsp;<a id="adminFooterLink" href="javascript:void(0)" onclick="VCAdmin.openLogin()" style="color:rgba(255,255,255,0.15);font-size:0.7rem;text-decoration:none;" title="Admin">&#9679;</a></p>
+                    <p class="mb-2">📸 <span class="text-gray-300">Follow <a href="https://instagram.com/velvetcrumbs" target="_blank" class="text-brand-primary hover:text-white transition-colors" data-client="instagram-link">@velvetcrumbs</a> on Instagram to see our real cake photos!</span></p>
+                    <p>&copy; 2025 <span data-client="name">Velvet Crumbs Bakery</span>, <span data-client="address">Pattom, Trivandrum</span>. All rights reserved. &nbsp;<a id="adminFooterLink" href="javascript:void(0)" onclick="VCAdmin.openLogin()" style="color:rgba(255,255,255,0.15);font-size:0.7rem;text-decoration:none;" title="Admin">&#9679;</a></p>
                 </div>
             </div>
         </div>
@@ -1231,8 +1322,8 @@ img, svg { display: block; max-width: 100%; }
         const faqs = [
             { q: "Do you make eggless cakes?", a: "Yes! All our cakes are available in eggless versions at no extra charge. Just mention it when you order on WhatsApp." },
             { q: "How far in advance should I order?", a: "We recommend ordering at least 2–3 days in advance for custom birthday cakes and 7+ days for wedding cakes. For same-day orders, WhatsApp us and we'll do our best!" },
-            { q: "Do you deliver to my area?", a: "We deliver across Trivandrum city. Delivery charges depend on your location. WhatsApp us your area for a quick quote." },
-            { q: "Can I pick up my cake?", a: "Absolutely! Self-pickup is available from our kitchen in Pattom, Trivandrum. Pickup orders get a small discount too." },
+            { q: "Do you deliver to my area?", a: "We deliver across " + CLIENT.city + " city. Delivery charges depend on your location. WhatsApp us your area for a quick quote." },
+            { q: "Can I pick up my cake?", a: "Absolutely! Self-pickup is available from our kitchen in " + CLIENT.address + ". Pickup orders get a small discount too." },
             { q: "What payment methods do you accept?", a: "We accept UPI (GPay, PhonePe, Paytm), bank transfer, and cash on delivery for local orders. Full payment is required at the time of order confirmation." },
             { q: "Can I request a fully custom design?", a: "Yes — that's our speciality! Send us a reference photo or describe your vision on WhatsApp and we'll make it happen. No design is too unique." },
             { q: "What is your cancellation policy?", a: "Orders cancelled 48+ hours before delivery receive a full refund. Cancellations within 48 hours receive a 50% refund. Same-day cancellations are non-refundable." },
@@ -1249,7 +1340,7 @@ img, svg { display: block; max-width: 100%; }
                     <button onclick="toggleFaq(${i})" aria-expanded="false" id="faq-btn-${i}"
                         style="width:100%;padding:1.25rem 1.5rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;font-family:inherit;">
                         <span style="font-weight:600;color:#3A2E39;font-size:0.95rem;">${item.q}</span>
-                        <i class="fas fa-chevron-down faq-icon" id="faq-icon-${i}" style="color:#E75480;transition:transform 0.3s;flex-shrink:0;margin-left:1rem;"></i>
+                        <i class="fas fa-chevron-down faq-icon" id="faq-icon-${i}" style="color:var(--color-accent);transition:transform 0.3s;flex-shrink:0;margin-left:1rem;"></i>
                     </button>
                     <div id="faq-ans-${i}" style="display:none;padding:0 1.5rem 1.25rem;color:#6E5C67;font-size:0.9rem;line-height:1.7;">
                         ${item.a}
@@ -1521,17 +1612,17 @@ function initCakeCard(card){
 <div id="adminLoginModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:10000;align-items:center;justify-content:center;">
   <div style="background:white;border-radius:1.5rem;padding:2rem;width:90%;max-width:380px;box-shadow:0 25px 50px rgba(0,0,0,0.35);">
     <div style="text-align:center;margin-bottom:1.5rem;">
-      <div style="font-family:'Great Vibes',cursive;font-size:2rem;color:#E75480;">Velvet Crumbs</div>
+      <div style="font-family:'Great Vibes',cursive;font-size:2rem;color:var(--color-accent);" data-client="name">Velvet Crumbs</div>
       <h3 style="font-family:'Playfair Display',serif;color:#3A2E39;margin:0.25rem 0 0;font-size:1.1rem;">Admin Panel</h3>
     </div>
     <input type="password" id="adminPwInput" placeholder="Enter admin password"
-      style="width:100%;padding:0.75rem 1rem;border:2px solid #F8C8DC;border-radius:0.75rem;font-size:1rem;outline:none;box-sizing:border-box;margin-bottom:0.5rem;">
+      style="width:100%;padding:0.75rem 1rem;border:2px solid var(--color-light);border-radius:0.75rem;font-size:1rem;outline:none;box-sizing:border-box;margin-bottom:0.5rem;">
     <p id="adminPwError" style="color:#dc2626;font-size:0.8rem;display:none;margin-bottom:0.5rem;"></p>
     <div id="adminFirebaseStatus" style="font-size:0.78rem;color:#6E5C67;text-align:center;margin-bottom:0.75rem;display:none;">
       <span id="fbStatusDot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#9ca3af;margin-right:5px;"></span>
       <span id="fbStatusText">Connecting to database...</span>
     </div>
-    <button onclick="VCAdmin.login()" style="width:100%;background:#E75480;color:white;padding:0.75rem;border-radius:0.75rem;font-weight:600;font-size:1rem;border:none;cursor:pointer;margin-bottom:0.5rem;">Login</button>
+    <button onclick="VCAdmin.login()" style="width:100%;background:var(--color-accent);color:white;padding:0.75rem;border-radius:0.75rem;font-weight:600;font-size:1rem;border:none;cursor:pointer;margin-bottom:0.5rem;">Login</button>
     <button onclick="VCAdmin.closeLogin()" style="width:100%;background:#f3f4f6;color:#6b7280;padding:0.75rem;border-radius:0.75rem;font-weight:600;border:none;cursor:pointer;">Cancel</button>
   </div>
 </div>
@@ -1542,7 +1633,7 @@ function initCakeCard(card){
   <!-- Header -->
   <div style="background:#3A2E39;color:white;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;gap:0.75rem;">
     <div style="min-width:0;">
-      <span style="font-family:'Great Vibes',cursive;font-size:1.5rem;color:#F8C8DC;">Velvet Crumbs</span>
+      <span style="font-family:'Great Vibes',cursive;font-size:1.5rem;color:var(--color-light);" data-client="name">Velvet Crumbs</span>
       <span style="font-size:0.78rem;color:#9ca3af;margin-left:0.4rem;">Admin</span>
     </div>
     <div style="display:flex;gap:0.5rem;align-items:center;flex-shrink:0;">
@@ -1558,14 +1649,14 @@ function initCakeCard(card){
   <!-- Setup Warning Banner -->
   <div id="setupBanner" style="display:none;background:#fef3c7;border-bottom:2px solid #fcd34d;padding:0.85rem 1.5rem;font-size:0.85rem;color:#92400e;">
     <strong>⚠️ Firebase not configured.</strong> The admin panel is running in <strong>local-only mode</strong> — changes save to this device only.
-    <a href="#" onclick="VCAdmin.showSetupGuide();return false;" style="color:#E75480;font-weight:600;margin-left:0.5rem;">View setup guide →</a>
+    <a href="#" onclick="VCAdmin.showSetupGuide();return false;" style="color:var(--color-accent);font-weight:600;margin-left:0.5rem;">View setup guide →</a>
   </div>
 
   <div style="max-width:960px;margin:0 auto;padding:1.25rem;">
 
     <!-- Tabs -->
     <div style="display:flex;gap:0.4rem;margin-bottom:1.25rem;flex-wrap:wrap;">
-      <button onclick="VCAdmin.tab('gallery')" id="tab-gallery" class="admin-tab" style="padding:0.5rem 1.1rem;border-radius:0.5rem;border:none;cursor:pointer;font-weight:600;font-size:0.85rem;background:#E75480;color:white;transition:all 0.2s;">🖼 Gallery</button>
+      <button onclick="VCAdmin.tab('gallery')" id="tab-gallery" class="admin-tab" style="padding:0.5rem 1.1rem;border-radius:0.5rem;border:none;cursor:pointer;font-weight:600;font-size:0.85rem;background:var(--color-accent);color:white;transition:all 0.2s;">🖼 Gallery</button>
       <button onclick="VCAdmin.tab('menu')" id="tab-menu" class="admin-tab" style="padding:0.5rem 1.1rem;border-radius:0.5rem;border:none;cursor:pointer;font-weight:600;font-size:0.85rem;background:#f3f4f6;color:#3A2E39;transition:all 0.2s;">🎂 Cake Menu</button>
       <button onclick="VCAdmin.tab('settings')" id="tab-settings" class="admin-tab" style="padding:0.5rem 1.1rem;border-radius:0.5rem;border:none;cursor:pointer;font-weight:600;font-size:0.85rem;background:#f3f4f6;color:#3A2E39;transition:all 0.2s;">⚙️ Settings</button>
       <button onclick="VCAdmin.tab('setup')" id="tab-setup" class="admin-tab" style="padding:0.5rem 1.1rem;border-radius:0.5rem;border:none;cursor:pointer;font-weight:600;font-size:0.85rem;background:#f3f4f6;color:#3A2E39;transition:all 0.2s;">🔌 Firebase Setup</button>
@@ -1578,10 +1669,10 @@ function initCakeCard(card){
           <h3 style="font-family:'Playfair Display',serif;color:#3A2E39;margin:0;font-size:1.2rem;">Gallery Photos</h3>
           <p style="color:#6E5C67;font-size:0.8rem;margin:0.2rem 0 0;">Changes go live for ALL visitors once saved to Firebase.</p>
         </div>
-        <button onclick="VCAdmin.addGalleryPhoto()" style="background:#E75480;color:white;padding:0.5rem 1rem;border-radius:2rem;font-size:0.85rem;font-weight:600;border:none;cursor:pointer;white-space:nowrap;">+ Add Photo</button>
+        <button onclick="VCAdmin.addGalleryPhoto()" style="background:var(--color-accent);color:white;padding:0.5rem 1rem;border-radius:2rem;font-size:0.85rem;font-weight:600;border:none;cursor:pointer;white-space:nowrap;">+ Add Photo</button>
       </div>
       <div style="background:#fff8e7;border:1px solid #fcd34d;border-radius:0.75rem;padding:0.75rem 1rem;font-size:0.8rem;color:#92400e;margin-bottom:1rem;">
-        💡 <strong>How to add your own photos:</strong> Upload to <a href="https://imgur.com/upload" target="_blank" style="color:#E75480;font-weight:600;">imgur.com</a> (free) → right-click image → "Copy image address" → paste URL below.
+        💡 <strong>How to add your own photos:</strong> Upload to <a href="https://imgur.com/upload" target="_blank" style="color:var(--color-accent);font-weight:600;">imgur.com</a> (free) → right-click image → "Copy image address" → paste URL below.
       </div>
       <div id="admin-gallery-list" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;"></div>
     </div>
@@ -1593,7 +1684,7 @@ function initCakeCard(card){
           <h3 style="font-family:'Playfair Display',serif;color:#3A2E39;margin:0 0 0.2rem;font-size:1.2rem;">🎂 Cake Menu</h3>
           <p style="color:#6E5C67;font-size:0.8rem;margin:0;">Edit names, prices, photos, weights &amp; flavours. Changes go live on Save.</p>
         </div>
-        <button onclick="VCAdmin.addCake()" style="background:#E75480;color:white;padding:0.55rem 1.1rem;border-radius:2rem;font-weight:600;font-size:0.85rem;border:none;cursor:pointer;">+ Add Cake</button>
+        <button onclick="VCAdmin.addCake()" style="background:var(--color-accent);color:white;padding:0.55rem 1.1rem;border-radius:2rem;font-weight:600;font-size:0.85rem;border:none;cursor:pointer;">+ Add Cake</button>
       </div>
       <div id="admin-menu-list" style="display:grid;gap:1rem;"></div>
     </div>
@@ -1604,27 +1695,27 @@ function initCakeCard(card){
       <div style="display:grid;gap:1rem;max-width:480px;">
         <div>
           <label style="display:block;font-weight:600;color:#3A2E39;margin-bottom:0.3rem;font-size:0.88rem;">WhatsApp Number</label>
-          <input id="s-phone" type="tel" style="width:100%;padding:0.65rem 1rem;border:2px solid #F8C8DC;border-radius:0.75rem;font-size:0.9rem;box-sizing:border-box;" placeholder="917034525123">
+          <input id="s-phone" type="tel" style="width:100%;padding:0.65rem 1rem;border:2px solid var(--color-light);border-radius:0.75rem;font-size:0.9rem;box-sizing:border-box;" placeholder="917034525123" data-client-placeholder="phone">
           <p style="color:#6E5C67;font-size:0.73rem;margin-top:0.2rem;">Country code + number, no spaces or +</p>
         </div>
         <div>
           <label style="display:block;font-weight:600;color:#3A2E39;margin-bottom:0.3rem;font-size:0.88rem;">Instagram Handle</label>
-          <input id="s-insta" type="text" style="width:100%;padding:0.65rem 1rem;border:2px solid #F8C8DC;border-radius:0.75rem;font-size:0.9rem;box-sizing:border-box;" placeholder="velvetcrumbs">
+          <input id="s-insta" type="text" style="width:100%;padding:0.65rem 1rem;border:2px solid var(--color-light);border-radius:0.75rem;font-size:0.9rem;box-sizing:border-box;" placeholder="velvetcrumbs" data-client-placeholder="instagram">
         </div>
         <div>
           <label style="display:block;font-weight:600;color:#3A2E39;margin-bottom:0.3rem;font-size:0.88rem;">About Section Photo</label>
           <div style="border-radius:0.75rem;overflow:hidden;background:#f3f4f6;height:140px;margin-bottom:0.5rem;">
             <img id="s-about-preview" src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;object-fit:cover;">
           </div>
-          <input id="s-about-img" type="text" style="width:100%;padding:0.65rem 1rem;border:2px solid #F8C8DC;border-radius:0.75rem;font-size:0.9rem;box-sizing:border-box;" placeholder="Paste image URL..." oninput="document.getElementById('s-about-preview').src=this.value">
+          <input id="s-about-img" type="text" style="width:100%;padding:0.65rem 1rem;border:2px solid var(--color-light);border-radius:0.75rem;font-size:0.9rem;box-sizing:border-box;" placeholder="Paste image URL..." oninput="document.getElementById('s-about-preview').src=this.value">
           <p style="color:#6E5C67;font-size:0.73rem;margin-top:0.2rem;">The photo shown in the About section of your site</p>
         </div>
         <div>
           <label style="display:block;font-weight:600;color:#3A2E39;margin-bottom:0.3rem;font-size:0.88rem;">Change Admin Password</label>
-          <input id="s-newpw" type="password" style="width:100%;padding:0.65rem 1rem;border:2px solid #F8C8DC;border-radius:0.75rem;font-size:0.9rem;box-sizing:border-box;" placeholder="New password (min 6 chars)">
-          <input id="s-confirmpw" type="password" style="width:100%;padding:0.65rem 1rem;border:2px solid #F8C8DC;border-radius:0.75rem;font-size:0.9rem;box-sizing:border-box;margin-top:0.5rem;" placeholder="Confirm new password">
+          <input id="s-newpw" type="password" style="width:100%;padding:0.65rem 1rem;border:2px solid var(--color-light);border-radius:0.75rem;font-size:0.9rem;box-sizing:border-box;" placeholder="New password (min 6 chars)">
+          <input id="s-confirmpw" type="password" style="width:100%;padding:0.65rem 1rem;border:2px solid var(--color-light);border-radius:0.75rem;font-size:0.9rem;box-sizing:border-box;margin-top:0.5rem;" placeholder="Confirm new password">
         </div>
-        <button onclick="VCAdmin.saveSettings()" style="background:#E75480;color:white;padding:0.75rem;border-radius:0.75rem;font-weight:600;font-size:0.95rem;border:none;cursor:pointer;">Save Settings</button>
+        <button onclick="VCAdmin.saveSettings()" style="background:var(--color-accent);color:white;padding:0.75rem;border-radius:0.75rem;font-weight:600;font-size:0.95rem;border:none;cursor:pointer;">Save Settings</button>
       </div>
     </div>
 
@@ -1634,29 +1725,29 @@ function initCakeCard(card){
       <p style="color:#6E5C67;font-size:0.85rem;margin-bottom:1.25rem;">Follow these steps once to connect your site to Firebase. After this, all admin changes go live for every visitor worldwide.</p>
 
       <div style="display:grid;gap:1rem;margin-bottom:1.5rem;">
-        <div style="background:white;border-radius:1rem;padding:1.1rem;border-left:4px solid #E75480;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="background:white;border-radius:1rem;padding:1.1rem;border-left:4px solid var(--color-accent);box-shadow:0 2px 8px rgba(0,0,0,0.06);">
           <p style="font-weight:700;color:#3A2E39;margin-bottom:0.4rem;">Step 1 — Create a Firebase project</p>
-          <p style="color:#6E5C67;font-size:0.83rem;line-height:1.6;">Go to <a href="https://console.firebase.google.com" target="_blank" style="color:#E75480;font-weight:600;">console.firebase.google.com</a> → Click <strong>"Add project"</strong> → Name it "velvet-crumbs" → Disable Google Analytics → Click <strong>"Create project"</strong>.</p>
+          <p style="color:#6E5C67;font-size:0.83rem;line-height:1.6;">Go to <a href="https://console.firebase.google.com" target="_blank" style="color:var(--color-accent);font-weight:600;">console.firebase.google.com</a> → Click <strong>"Add project"</strong> → Name it "velvet-crumbs" → Disable Google Analytics → Click <strong>"Create project"</strong>.</p>
         </div>
-        <div style="background:white;border-radius:1rem;padding:1.1rem;border-left:4px solid #E75480;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="background:white;border-radius:1rem;padding:1.1rem;border-left:4px solid var(--color-accent);box-shadow:0 2px 8px rgba(0,0,0,0.06);">
           <p style="font-weight:700;color:#3A2E39;margin-bottom:0.4rem;">Step 2 — Create a Realtime Database</p>
           <p style="color:#6E5C67;font-size:0.83rem;line-height:1.6;">In your project → Left sidebar → <strong>Build → Realtime Database</strong> → Click <strong>"Create Database"</strong> → Choose any region → Start in <strong>test mode</strong> → Enable.</p>
         </div>
-        <div style="background:white;border-radius:1rem;padding:1.1rem;border-left:4px solid #E75480;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="background:white;border-radius:1rem;padding:1.1rem;border-left:4px solid var(--color-accent);box-shadow:0 2px 8px rgba(0,0,0,0.06);">
           <p style="font-weight:700;color:#3A2E39;margin-bottom:0.4rem;">Step 3 — Get your config keys</p>
           <p style="color:#6E5C67;font-size:0.83rem;line-height:1.6;">Project settings (gear icon top-left) → <strong>"Your apps"</strong> section → Click <strong>"&lt;/&gt; Web"</strong> → Register app as "velvet-crumbs-web" → Copy the <code style="background:#f3f4f6;padding:1px 4px;border-radius:3px;">firebaseConfig</code> object shown.</p>
         </div>
-        <div style="background:white;border-radius:1rem;padding:1.1rem;border-left:4px solid #E75480;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="background:white;border-radius:1rem;padding:1.1rem;border-left:4px solid var(--color-accent);box-shadow:0 2px 8px rgba(0,0,0,0.06);">
           <p style="font-weight:700;color:#3A2E39;margin-bottom:0.4rem;">Step 4 — Paste your config below</p>
           <p style="color:#6E5C67;font-size:0.83rem;margin-bottom:0.75rem;line-height:1.6;">Fill in the fields from your Firebase config object and click Connect. The page will automatically use Firebase from that point on.</p>
           <div style="display:grid;gap:0.5rem;">
-            <input id="fb-apiKey" type="text" placeholder="apiKey" style="width:100%;padding:0.6rem 0.85rem;border:1.5px solid #F8C8DC;border-radius:0.6rem;font-size:0.82rem;box-sizing:border-box;font-family:monospace;">
-            <input id="fb-authDomain" type="text" placeholder="authDomain (e.g. your-app.firebaseapp.com)" style="width:100%;padding:0.6rem 0.85rem;border:1.5px solid #F8C8DC;border-radius:0.6rem;font-size:0.82rem;box-sizing:border-box;font-family:monospace;">
-            <input id="fb-dbURL" type="text" placeholder="databaseURL (e.g. https://your-app-default-rtdb.firebaseio.com)" style="width:100%;padding:0.6rem 0.85rem;border:1.5px solid #F8C8DC;border-radius:0.6rem;font-size:0.82rem;box-sizing:border-box;font-family:monospace;">
-            <input id="fb-projectId" type="text" placeholder="projectId" style="width:100%;padding:0.6rem 0.85rem;border:1.5px solid #F8C8DC;border-radius:0.6rem;font-size:0.82rem;box-sizing:border-box;font-family:monospace;">
-            <input id="fb-appId" type="text" placeholder="appId" style="width:100%;padding:0.6rem 0.85rem;border:1.5px solid #F8C8DC;border-radius:0.6rem;font-size:0.82rem;box-sizing:border-box;font-family:monospace;">
+            <input id="fb-apiKey" type="text" placeholder="apiKey" style="width:100%;padding:0.6rem 0.85rem;border:1.5px solid var(--color-light);border-radius:0.6rem;font-size:0.82rem;box-sizing:border-box;font-family:monospace;">
+            <input id="fb-authDomain" type="text" placeholder="authDomain (e.g. your-app.firebaseapp.com)" style="width:100%;padding:0.6rem 0.85rem;border:1.5px solid var(--color-light);border-radius:0.6rem;font-size:0.82rem;box-sizing:border-box;font-family:monospace;">
+            <input id="fb-dbURL" type="text" placeholder="databaseURL (e.g. https://your-app-default-rtdb.firebaseio.com)" style="width:100%;padding:0.6rem 0.85rem;border:1.5px solid var(--color-light);border-radius:0.6rem;font-size:0.82rem;box-sizing:border-box;font-family:monospace;">
+            <input id="fb-projectId" type="text" placeholder="projectId" style="width:100%;padding:0.6rem 0.85rem;border:1.5px solid var(--color-light);border-radius:0.6rem;font-size:0.82rem;box-sizing:border-box;font-family:monospace;">
+            <input id="fb-appId" type="text" placeholder="appId" style="width:100%;padding:0.6rem 0.85rem;border:1.5px solid var(--color-light);border-radius:0.6rem;font-size:0.82rem;box-sizing:border-box;font-family:monospace;">
           </div>
-          <button onclick="VCAdmin.connectFirebase()" style="margin-top:0.75rem;background:#E75480;color:white;padding:0.7rem 1.5rem;border-radius:2rem;font-weight:600;font-size:0.9rem;border:none;cursor:pointer;">🔌 Connect Firebase</button>
+          <button onclick="VCAdmin.connectFirebase()" style="margin-top:0.75rem;background:var(--color-accent);color:white;padding:0.7rem 1.5rem;border-radius:2rem;font-weight:600;font-size:0.9rem;border:none;cursor:pointer;">🔌 Connect Firebase</button>
           <p id="fb-connect-msg" style="font-size:0.8rem;margin-top:0.5rem;display:none;"></p>
         </div>
         <div style="background:#f0fdf4;border-radius:1rem;padding:1rem;border:1px solid #86efac;">
@@ -1687,7 +1778,7 @@ const VCAdmin = (function(){
 
   const LOCAL_KEY   = 'vc_admin_local';
   const FB_CFG_KEY  = 'vc_fb_config';
-  const DEFAULT_PW  = 'velvet2025';
+  const DEFAULT_PW  = CLIENT.adminPassword;
   const DB_PATH     = 'velvetcrumbs';
 
   let db          = null;   // Firebase database ref
@@ -1771,16 +1862,8 @@ const VCAdmin = (function(){
     }
   }
 
-  // Built-in Firebase config (pre-configured)
-  const BUILTIN_FB_CFG = {
-    apiKey:            "AIzaSyD6tAEGRUNGqCcOvhXLtL-mWK6ZSs67SzQ",
-    authDomain:        "velvet-crumbs-tvm.firebaseapp.com",
-    databaseURL:       "https://velvet-crumbs-tvm-default-rtdb.firebaseio.com",
-    projectId:         "velvet-crumbs-tvm",
-    storageBucket:     "velvet-crumbs-tvm.firebasestorage.app",
-    messagingSenderId: "721673796562",
-    appId:             "1:721673796562:web:fa524900e74ac6351ba60b"
-  };
+  // Built-in Firebase config — pulled from CLIENT config at top of file
+  const BUILTIN_FB_CFG = CLIENT.firebase;
 
   // Load saved Firebase config on startup
   function autoInitFirebase(){
@@ -1955,7 +2038,7 @@ const VCAdmin = (function(){
       t.style.background = '#f3f4f6'; t.style.color = '#3A2E39';
     });
     const activeTab = document.getElementById('tab-' + name);
-    if(activeTab){ activeTab.style.background = '#E75480'; activeTab.style.color = 'white'; }
+    if(activeTab){ activeTab.style.background = CLIENT.colorAccent; activeTab.style.color = 'white'; }
   }
 
   // ── Gallery ────────────────────────────────────────────────────
@@ -2007,9 +2090,9 @@ const VCAdmin = (function(){
           `<select class="weight w-full p-2 rounded-lg mb-2 border">${weightOptions}</select>` +
           `<label class="text-sm text-brand-muted mt-1 block">Quantity</label>` +
           `<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">` +
-            `<button class="qty-btn qty-minus" style="width:28px;height:28px;border-radius:50%;background:#F8C8DC;color:#3A2E39;font-size:1.1rem;font-weight:bold;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;flex-shrink:0;">−</button>` +
+            `<button class="qty-btn qty-minus" style="width:28px;height:28px;border-radius:50%;background:var(--color-light);color:#3A2E39;font-size:1.1rem;font-weight:bold;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;flex-shrink:0;">−</button>` +
             `<span class="qty-display" style="min-width:24px;text-align:center;font-weight:600;font-size:0.9rem;">1</span>` +
-            `<button class="qty-btn qty-plus" style="width:28px;height:28px;border-radius:50%;background:#E75480;color:white;font-size:1.1rem;font-weight:bold;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;flex-shrink:0;">+</button>` +
+            `<button class="qty-btn qty-plus" style="width:28px;height:28px;border-radius:50%;background:var(--color-accent);color:white;font-size:1.1rem;font-weight:bold;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;flex-shrink:0;">+</button>` +
           `</div>` +
           `<label class="text-sm text-brand-muted mt-1 block">Flavour</label>` +
           `<select class="flavour w-full p-2 rounded-lg mb-2 border text-sm">${flavourOptions}</select>` +
@@ -2049,10 +2132,10 @@ const VCAdmin = (function(){
         '</div>' +
         '<div style="padding:0.75rem;">' +
           '<input type="text" id="gurl-' + i + '" value="' + (item.url||'') + '" placeholder="Paste image URL..." ' +
-            'style="width:100%;padding:0.45rem 0.7rem;border:1.5px solid #F8C8DC;border-radius:0.5rem;font-size:0.78rem;box-sizing:border-box;margin-bottom:0.35rem;" ' +
+            'style="width:100%;padding:0.45rem 0.7rem;border:1.5px solid var(--color-light);border-radius:0.5rem;font-size:0.78rem;box-sizing:border-box;margin-bottom:0.35rem;" ' +
             'oninput="VCAdmin.previewGallery(' + i + ')">' +
           '<input type="text" id="galt-' + i + '" value="' + (item.alt||'') + '" placeholder="Description (e.g. Chocolate birthday cake)" ' +
-            'style="width:100%;padding:0.45rem 0.7rem;border:1.5px solid #F8C8DC;border-radius:0.5rem;font-size:0.78rem;box-sizing:border-box;">' +
+            'style="width:100%;padding:0.45rem 0.7rem;border:1.5px solid var(--color-light);border-radius:0.5rem;font-size:0.78rem;box-sizing:border-box;">' +
         '</div>';
       container.appendChild(card);
     });
@@ -2077,16 +2160,16 @@ const VCAdmin = (function(){
         '<div style="padding:0.85rem;display:grid;gap:0.4rem;">' +
           '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;">' +
             '<div><label style="font-size:0.72rem;font-weight:600;color:#6E5C67;display:block;">Cake Name</label>' +
-            '<input type="text" id="cname-' + i + '" value="' + (cake.name||'') + '" placeholder="e.g. Black Forest" style="width:100%;padding:0.4rem 0.6rem;border:1.5px solid #F8C8DC;border-radius:0.5rem;font-size:0.8rem;box-sizing:border-box;"></div>' +
+            '<input type="text" id="cname-' + i + '" value="' + (cake.name||'') + '" placeholder="e.g. Black Forest" style="width:100%;padding:0.4rem 0.6rem;border:1.5px solid var(--color-light);border-radius:0.5rem;font-size:0.8rem;box-sizing:border-box;"></div>' +
             '<div><label style="font-size:0.72rem;font-weight:600;color:#6E5C67;display:block;">Base Price (₹)</label>' +
-            '<input type="number" id="cprice-' + i + '" value="' + (cake.price||0) + '" min="0" style="width:100%;padding:0.4rem 0.6rem;border:1.5px solid #F8C8DC;border-radius:0.5rem;font-size:0.8rem;box-sizing:border-box;"></div>' +
+            '<input type="number" id="cprice-' + i + '" value="' + (cake.price||0) + '" min="0" style="width:100%;padding:0.4rem 0.6rem;border:1.5px solid var(--color-light);border-radius:0.5rem;font-size:0.8rem;box-sizing:border-box;"></div>' +
           '</div>' +
           '<label style="font-size:0.72rem;font-weight:600;color:#6E5C67;display:block;">Photo URL</label>' +
-          '<input type="text" id="curl-' + i + '" value="' + (cake.img||'') + '" placeholder="Paste image URL..." style="width:100%;padding:0.4rem 0.6rem;border:1.5px solid #F8C8DC;border-radius:0.5rem;font-size:0.78rem;box-sizing:border-box;" oninput="VCAdmin.previewCake(' + i + ')">' +
+          '<input type="text" id="curl-' + i + '" value="' + (cake.img||'') + '" placeholder="Paste image URL..." style="width:100%;padding:0.4rem 0.6rem;border:1.5px solid var(--color-light);border-radius:0.5rem;font-size:0.78rem;box-sizing:border-box;" oninput="VCAdmin.previewCake(' + i + ')">' +
           '<label style="font-size:0.72rem;font-weight:600;color:#6E5C67;display:block;">Weights (comma-separated, in kg)</label>' +
-          '<input type="text" id="cweights-' + i + '" value="' + weightsStr + '" placeholder="0.5, 1, 2" style="width:100%;padding:0.4rem 0.6rem;border:1.5px solid #F8C8DC;border-radius:0.5rem;font-size:0.78rem;box-sizing:border-box;">' +
+          '<input type="text" id="cweights-' + i + '" value="' + weightsStr + '" placeholder="0.5, 1, 2" style="width:100%;padding:0.4rem 0.6rem;border:1.5px solid var(--color-light);border-radius:0.5rem;font-size:0.78rem;box-sizing:border-box;">' +
           '<label style="font-size:0.72rem;font-weight:600;color:#6E5C67;display:block;">Flavours (comma-separated)</label>' +
-          '<input type="text" id="cflavours-' + i + '" value="' + flavoursStr + '" placeholder="Vanilla, Chocolate, ..." style="width:100%;padding:0.4rem 0.6rem;border:1.5px solid #F8C8DC;border-radius:0.5rem;font-size:0.78rem;box-sizing:border-box;">' +
+          '<input type="text" id="cflavours-' + i + '" value="' + flavoursStr + '" placeholder="Vanilla, Chocolate, ..." style="width:100%;padding:0.4rem 0.6rem;border:1.5px solid var(--color-light);border-radius:0.5rem;font-size:0.78rem;box-sizing:border-box;">' +
         '</div>';
       container.appendChild(div);
     });
