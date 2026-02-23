@@ -1415,6 +1415,15 @@ window.checkout = function(){
 };
 
 // ── Cake Cards ────────────────────────────────────────────────────────
+
+// Init any hardcoded cards (none now, but kept for safety)
+document.querySelectorAll(".cake-card").forEach(initCakeCard)
+
+// ── Init ──────────────────────────────────────────────────────────────
+updateMiniBar(); // Restore cart from localStorage on page load
+
+})();
+
 function initCakeCard(card){
   const name = card.dataset.name;
   const basePrice = parseFloat(card.dataset.baseprice);
@@ -1494,14 +1503,6 @@ function initCakeCard(card){
     addToCart(name, weight, price, date, flavour, cakeMsg, qty);
   });
 }
-
-// Init any hardcoded cards (none now, but kept for safety)
-document.querySelectorAll(".cake-card").forEach(initCakeCard)
-
-// ── Init ──────────────────────────────────────────────────────────────
-updateMiniBar(); // Restore cart from localStorage on page load
-
-})();
 </script>
 
 </body>
