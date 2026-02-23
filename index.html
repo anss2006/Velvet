@@ -24,7 +24,7 @@
     <meta name="keywords" content="custom cakes Trivandrum, birthday cake Trivandrum, wedding cake Kerala, custom theme cake Pattom, eggless cake Trivandrum, cake delivery Trivandrum, anniversary cake Kerala">
 
     <!-- Structured Data: Local Business -->
-    <script type="application/ld+json">
+    <script type="application/ld+json" id="schema-jsonld">
     {
       "@context": "https://schema.org",
       "@type": "Bakery",
@@ -1171,6 +1171,7 @@ img, svg { display: block; max-width: 100%; }
                 }
             });
         }
+        window.revealOnScroll = revealOnScroll;
         window.addEventListener('scroll', revealOnScroll, { passive: true });
         revealOnScroll();
 
@@ -1369,9 +1370,10 @@ function renderCart(){
     return;
   }
 
+  let html = "";
   cart.forEach((item, index)=>{
     total += item.price;
-    list.innerHTML += `
+    html += `
       <div class="p-4 rounded-xl bg-brand-bg border border-brand-primary/30">
         <div class="flex justify-between items-start">
           <div>
@@ -1384,6 +1386,7 @@ function renderCart(){
       </div>
     `;
   });
+  list.innerHTML = html;
 
   document.getElementById("cartTotal").innerHTML =
     `<div class="flex justify-between items-center">
@@ -1835,6 +1838,15 @@ const VCAdmin = (function(){
         el.href = 'tel:+' + raw;
         el.textContent = formatted;
       });
+      // Update schema.org structured data
+      const schemaEl = document.getElementById('schema-jsonld');
+      if(schemaEl){
+        try{
+          const schema = JSON.parse(schemaEl.textContent);
+          schema.telephone = formatted;
+          schemaEl.textContent = JSON.stringify(schema, null, 2);
+        } catch(e){}
+      }
     }
     // About section image
     if(data.aboutImg){
@@ -2015,6 +2027,8 @@ const VCAdmin = (function(){
       grid.appendChild(div);
       if(typeof initCakeCard === 'function') initCakeCard(div);
     });
+    // Trigger reveal animations on newly rendered cards
+    if(typeof window.revealOnScroll === 'function') window.revealOnScroll();
   }
 
   function renderGallery(){
