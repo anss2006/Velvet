@@ -74,6 +74,15 @@
         appId:             "1:721673796562:web:fa524900e74ac6351ba60b"
       },
 
+      // ── Reviews ───────────────────────────────────────
+      reviews: [
+        { text: "The cake was exactly how we imagined. Beautiful design and amazing taste!", name: "Anjali R.", order: "Birthday Order" },
+        { text: "Delivered on time and tasted incredible. Highly recommend!", name: "Rahul S.", order: "Anniversary Order" },
+        { text: "Got my daughter's unicorn cake made here. She absolutely loved it — the detail was unreal!", name: "Priya M.", order: "Kids Theme Order" },
+        { text: "Ordered our wedding cake with just 5 days notice and it was stunning. Super responsive on WhatsApp too.", name: "Arun K.", order: "Wedding Order" },
+        { text: "The red velvet was the moistest cake I have ever tasted. Everyone at the party asked where it was from!", name: "Sneha M.", order: "Anniversary Order" }
+      ],
+
       // ── Helpers (do not edit) ─────────────────────────
       whatsapp: function(msg){ return "https://wa.me/" + this.phone + "?text=" + encodeURIComponent(msg || "Hi I want to order"); }
     };
@@ -703,7 +712,7 @@ img, svg { display: block; max-width: 100%; }
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)" id="navLogo">
                     <span class="script-font text-3xl text-brand-accent" data-client="name">Velvet Crumbs</span>
                 </div>
                 
@@ -908,113 +917,8 @@ img, svg { display: block; max-width: 100%; }
             </div>
 
             <div id="testimonial-container" class="relative">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-slide transition-opacity duration-500 reveal">
-                    <div class="bg-white p-8 md:p-12 rounded-3xl shadow-soft text-center relative">
-                        <i class="fas fa-quote-left text-brand-primary text-4xl opacity-50 absolute top-8 left-8"></i>
-                        <p class="text-xl md:text-2xl text-brand-text font-light italic mb-8 leading-relaxed">
-                            "The cake was exactly how we imagined. Beautiful design and amazing taste!"
-                        </p>
-
-                        <div style="color:var(--color-accent);font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
-                        <div class="flex items-center justify-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-brand-accent font-bold">
-                                AR
-                            </div>
-                            <div class="text-left">
-                                <h4 class="font-bold text-brand-text">Anjali R.</h4>
-                                <p class="text-sm text-brand-muted">Birthday Order</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 (Hidden initially) -->
-                <div class="testimonial-slide absolute top-0 left-0 w-full opacity-0 pointer-events-none transition-opacity duration-500">
-                    <div class="bg-white p-8 md:p-12 rounded-3xl shadow-soft text-center relative">
-                        <i class="fas fa-quote-left text-brand-primary text-4xl opacity-50 absolute top-8 left-8"></i>
-                        <p class="text-xl md:text-2xl text-brand-text font-light italic mb-8 leading-relaxed">
-                            "Delivered on time and tasted incredible. Highly recommend Velvet Crumbs."
-                        </p>
-
-                        <div style="color:var(--color-accent);font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
-                        <div class="flex items-center justify-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-brand-accent font-bold">
-                                RS
-                            </div>
-                            <div class="text-left">
-                                <h4 class="font-bold text-brand-text">Rahul S.</h4>
-                                <p class="text-sm text-brand-muted">Anniversary Order</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-slide absolute top-0 left-0 w-full opacity-0 pointer-events-none transition-opacity duration-500">
-                    <div class="bg-white p-8 md:p-12 rounded-3xl shadow-soft text-center relative">
-                        <i class="fas fa-quote-left text-brand-primary text-4xl opacity-50 absolute top-8 left-8"></i>
-                        <p class="text-xl md:text-2xl text-brand-text font-light italic mb-8 leading-relaxed">
-                            "Got my daughter's unicorn cake made here. She absolutely loved it — the detail was unreal!"
-                        </p>
-
-                        <div style="color:var(--color-accent);font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
-                        <div class="flex items-center justify-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-brand-accent font-bold">PM</div>
-                            <div class="text-left">
-                                <h4 class="font-bold text-brand-text">Priya M.</h4>
-                                <p class="text-sm text-brand-muted">Kids Theme Order</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 4 -->
-                <div class="testimonial-slide absolute top-0 left-0 w-full opacity-0 pointer-events-none transition-opacity duration-500">
-                    <div class="bg-white p-8 md:p-12 rounded-3xl shadow-soft text-center relative">
-                        <i class="fas fa-quote-left text-brand-primary text-4xl opacity-50 absolute top-8 left-8"></i>
-                        <p class="text-xl md:text-2xl text-brand-text font-light italic mb-8 leading-relaxed">
-                            "Ordered our wedding cake with just 5 days notice and it was stunning. Super responsive on WhatsApp too."
-                        </p>
-
-                        <div style="color:var(--color-accent);font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
-                        <div class="flex items-center justify-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-brand-accent font-bold">AK</div>
-                            <div class="text-left">
-                                <h4 class="font-bold text-brand-text">Arun K.</h4>
-                                <p class="text-sm text-brand-muted">Wedding Order</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 5 -->
-                <div class="testimonial-slide absolute top-0 left-0 w-full opacity-0 pointer-events-none transition-opacity duration-500">
-                    <div class="bg-white p-8 md:p-12 rounded-3xl shadow-soft text-center relative">
-                        <i class="fas fa-quote-left text-brand-primary text-4xl opacity-50 absolute top-8 left-8"></i>
-                        <p class="text-xl md:text-2xl text-brand-text font-light italic mb-8 leading-relaxed">
-                            "The red velvet was the moistest cake I have ever tasted. Everyone at the party asked where it was from!"
-                        </p>
-
-                        <div style="color:var(--color-accent);font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
-                        <div class="flex items-center justify-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-brand-accent font-bold">SM</div>
-                            <div class="text-left">
-                                <h4 class="font-bold text-brand-text">Sneha M.</h4>
-                                <p class="text-sm text-brand-muted">Anniversary Order</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Controls -->
-                <div class="flex justify-center gap-4 mt-8">
-                    <button onclick="switchTestimonial(0)" class="w-3 h-3 rounded-full bg-brand-accent testimonial-dot" aria-label="Testimonial 1"></button>
-                    <button onclick="switchTestimonial(1)" class="w-3 h-3 rounded-full bg-brand-primary/30 testimonial-dot" aria-label="Testimonial 2"></button>
-                    <button onclick="switchTestimonial(2)" class="w-3 h-3 rounded-full bg-brand-primary/30 testimonial-dot" aria-label="Testimonial 3"></button>
-                    <button onclick="switchTestimonial(3)" class="w-3 h-3 rounded-full bg-brand-primary/30 testimonial-dot" aria-label="Testimonial 4"></button>
-                    <button onclick="switchTestimonial(4)" class="w-3 h-3 rounded-full bg-brand-primary/30 testimonial-dot" aria-label="Testimonial 5"></button>
-                </div>
+                <!-- Rendered by JS from CLIENT.reviews -->
+                <div class="flex justify-center gap-4 mt-8" id="testimonial-dots"></div>
             </div>
         </div>
     </section>
@@ -1171,7 +1075,7 @@ img, svg { display: block; max-width: 100%; }
                 </div>
                 <div class="text-center text-gray-400 text-sm">
                     <p class="mb-2">📸 <span class="text-gray-300">Follow <a href="https://instagram.com/velvetcrumbs" target="_blank" class="text-brand-primary hover:text-white transition-colors" data-client="instagram-link">@velvetcrumbs</a> on Instagram to see our real cake photos!</span></p>
-                    <p>&copy; 2025 <span data-client="name">Velvet Crumbs Bakery</span>, <span data-client="address">Pattom, Trivandrum</span>. All rights reserved. &nbsp;<a id="adminFooterLink" href="javascript:void(0)" onclick="VCAdmin.openLogin()" style="color:rgba(255,255,255,0.15);font-size:0.7rem;text-decoration:none;" title="Admin">&#9679;</a></p>
+                    <p>&copy; 2025 <span data-client="name">Velvet Crumbs Bakery</span>, <span data-client="address">Pattom, Trivandrum</span>. All rights reserved. &nbsp;<a id="adminFooterDot" href="javascript:void(0)" style="color:rgba(255,255,255,0.15);font-size:0.7rem;text-decoration:none;" title="">&#9679;</a></p>
                 </div>
             </div>
         </div>
@@ -1297,26 +1201,60 @@ img, svg { display: block; max-width: 100%; }
         });
 
         // ── Testimonial Carousel ─────────────────────────────────────────
-        let currentTestimonial = 0;
-        const testimonials = document.querySelectorAll('.testimonial-slide');
-        const dots = document.querySelectorAll('.testimonial-dot');
+        (function(){
+          const container = document.getElementById('testimonial-container');
+          const dotsEl    = document.getElementById('testimonial-dots');
+          const reviews   = CLIENT.reviews || [];
+          let current     = 0;
 
-        function switchTestimonial(index) {
-            testimonials.forEach((t, i) => {
-                t.classList.toggle('opacity-0', i !== index);
-                t.classList.toggle('pointer-events-none', i !== index);
-                t.classList.toggle('opacity-100', i === index);
+          // Render slides
+          reviews.forEach((r, i) => {
+            const initials = r.name.split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
+            const div = document.createElement('div');
+            div.className = 'testimonial-slide transition-opacity duration-500' + (i === 0 ? ' reveal' : ' absolute top-0 left-0 w-full opacity-0 pointer-events-none');
+            div.innerHTML =
+              `<div class="bg-white p-8 md:p-12 rounded-3xl shadow-soft text-center relative">
+                <i class="fas fa-quote-left text-brand-primary text-4xl opacity-50 absolute top-8 left-8"></i>
+                <p class="text-xl md:text-2xl text-brand-text font-light italic mb-8 leading-relaxed">"${r.text}"</p>
+                <div style="color:var(--color-accent);font-size:1.2rem;margin-bottom:1rem;">★★★★★</div>
+                <div class="flex items-center justify-center gap-4">
+                  <div class="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-brand-accent font-bold">${initials}</div>
+                  <div class="text-left">
+                    <h4 class="font-bold text-brand-text">${r.name}</h4>
+                    <p class="text-sm text-brand-muted">${r.order}</p>
+                  </div>
+                </div>
+              </div>`;
+            container.insertBefore(div, dotsEl);
+
+            // Dot
+            const btn = document.createElement('button');
+            btn.className = 'w-3 h-3 rounded-full testimonial-dot ' + (i === 0 ? 'bg-brand-accent' : 'bg-brand-primary/30');
+            btn.setAttribute('aria-label', 'Testimonial ' + (i+1));
+            btn.addEventListener('click', () => { current = i; switchTestimonial(i); });
+            dotsEl.appendChild(btn);
+          });
+
+          const slides = container.querySelectorAll('.testimonial-slide');
+          const dots   = dotsEl.querySelectorAll('.testimonial-dot');
+
+          window.switchTestimonial = function(index){
+            slides.forEach((t, i) => {
+              t.classList.toggle('opacity-0', i !== index);
+              t.classList.toggle('pointer-events-none', i !== index);
+              t.classList.toggle('opacity-100', i === index);
             });
             dots.forEach((d, i) => {
-                d.classList.toggle('bg-brand-accent', i === index);
-                d.classList.toggle('bg-brand-primary/30', i !== index);
+              d.classList.toggle('bg-brand-accent', i === index);
+              d.classList.toggle('bg-brand-primary/30', i !== index);
             });
-        }
+          };
 
-        setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            switchTestimonial(currentTestimonial);
-        }, 6000);
+          setInterval(() => {
+            current = (current + 1) % slides.length;
+            switchTestimonial(current);
+          }, 6000);
+        })();
 
         // ── FAQ Accordion ────────────────────────────────────────────────
         const faqs = [
@@ -1764,8 +1702,6 @@ function initCakeCard(card){
 <div id="adminToast" style="position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);background:#3A2E39;color:white;padding:0.75rem 1.5rem;border-radius:2rem;font-size:0.88rem;opacity:0;transition:all 0.35s ease;z-index:10001;pointer-events:none;white-space:nowrap;box-shadow:0 8px 25px rgba(0,0,0,0.2);"></div>
 
 <!-- Hidden triple-tap zone on footer -->
-<div id="adminTriggerZone" style="position:fixed;bottom:0;left:0;right:0;height:36px;z-index:9998;"></div>
-
 <!-- Firebase SDKs (compat v9) — must load before VCAdmin -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
@@ -1966,20 +1902,19 @@ const VCAdmin = (function(){
     }
   }
 
-  // ── Admin trigger: Ctrl+Shift+A keyboard shortcut ───────────────
-  document.addEventListener('keydown', e => {
-    if(e.ctrlKey && e.shiftKey && e.key === 'A'){ e.preventDefault(); openLogin(); }
-  });
-  // Footer link trigger
-  const adminFooterLink = document.getElementById('adminFooterLink');
-  if(adminFooterLink) adminFooterLink.addEventListener('click', e => { e.preventDefault(); openLogin(); });
-  // Keep invisible tap zone as fallback
+  // ── Admin trigger: 5 fast taps on the footer dot ───────────────
   let tapCount = 0, tapTimer;
-  document.getElementById('adminTriggerZone').addEventListener('click', () => {
+  const adminFooterDot = document.getElementById('adminFooterDot');
+  if(adminFooterDot) adminFooterDot.addEventListener('click', () => {
     tapCount++;
     clearTimeout(tapTimer);
-    tapTimer = setTimeout(() => { tapCount = 0; }, 700);
-    if(tapCount >= 3){ tapCount = 0; openLogin(); }
+    tapTimer = setTimeout(() => { tapCount = 0; }, 800);
+    if(tapCount >= 5){ tapCount = 0; openLogin(); }
+  });
+
+  // ── Admin trigger: Ctrl+Shift+A keyboard shortcut (desktop) ────
+  document.addEventListener('keydown', e => {
+    if(e.ctrlKey && e.shiftKey && e.key === 'A'){ e.preventDefault(); openLogin(); }
   });
 
   function openLogin(){
