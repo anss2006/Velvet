@@ -1075,7 +1075,7 @@ img, svg { display: block; max-width: 100%; }
                 </div>
                 <div class="text-center text-gray-400 text-sm">
                     <p class="mb-2">📸 <span class="text-gray-300">Follow <a href="https://instagram.com/velvetcrumbs" target="_blank" class="text-brand-primary hover:text-white transition-colors" data-client="instagram-link">@velvetcrumbs</a> on Instagram to see our real cake photos!</span></p>
-                    <p>&copy; 2025 <span data-client="name">Velvet Crumbs Bakery</span>, <span data-client="address">Pattom, Trivandrum</span>. All rights reserved. &nbsp;<a id="adminFooterDot" href="javascript:void(0)" style="color:rgba(255,255,255,0.15);font-size:0.7rem;text-decoration:none;" title="">&#9679;</a></p>
+                    <p>&copy; 2025 <span data-client="name">Velvet Crumbs Bakery</span>, <span data-client="address">Pattom, Trivandrum</span>. All rights reserved. &nbsp;<span id="adminFooterDot" style="color:rgba(255,255,255,0.15);font-size:0.7rem;cursor:default;user-select:none;">&#9679;</span></p>
                 </div>
             </div>
         </div>
@@ -1918,7 +1918,6 @@ const VCAdmin = (function(){
   });
 
   function openLogin(){
-    if(sessionStorage.getItem('vc_auth') === '1'){ openPanel(); return; }
     const modal = document.getElementById('adminLoginModal');
     const fbCfg = localStorage.getItem(FB_CFG_KEY);
     document.getElementById('adminFirebaseStatus').style.display = fbCfg ? 'none' : 'flex';
