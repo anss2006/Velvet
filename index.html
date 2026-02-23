@@ -1339,6 +1339,8 @@ function addToCart(name, weight, price, date, flavour, cakeMsg, qty){
   updateMiniBar();
   showToast("🎂 " + name + " added to cart!");
 }
+window.addToCart = addToCart; // expose for initCakeCard (defined outside IIFE)
+window.showToast = showToast; // expose for initCakeCard (defined outside IIFE)
 
 // ── Cart Panel ────────────────────────────────────────────────────────
 window.openCart = function(){
@@ -1434,6 +1436,7 @@ function initCakeCard(card){
   const cartBtn = card.querySelector(".cart-btn");
   const dateInput = card.querySelector(".date");
   const dateError = card.querySelector(".date-error");
+  dateInput.min = new Date().toISOString().split("T")[0]; // prevent past dates
   const flavourSelect = card.querySelector(".flavour");
   const cakeMsgInput = card.querySelector(".cake-msg");
   const qtyDisplay = card.querySelector(".qty-display");
@@ -1990,7 +1993,7 @@ const VCAdmin = (function(){
           `<input type="text" class="cake-msg w-full p-2 rounded-lg mb-2 border text-sm" placeholder="e.g. Happy Birthday Arjun!">` +
           `<p class="price font-semibold text-brand-accent mb-2">₹${cake.price}</p>` +
           `<label class="text-sm text-brand-muted">Delivery Date</label>` +
-          `<input type="date" class="date w-full p-2 rounded-lg mb-1 border">` +
+          `<input type="date" class="date w-full p-2 rounded-lg mb-1 border" min="${new Date().toISOString().split('T')[0]}">` +
           `<p class="date-error">⚠ Please select a delivery date.</p>` +
           `<div class="flex gap-3">` +
             `<button class="order-btn bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg flex-1">Order</button>` +
@@ -2286,4 +2289,4 @@ const VCAdmin = (function(){
 })();
 </script>
 </body>
-                            </html>
+    </html>
